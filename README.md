@@ -21,8 +21,7 @@
 
 ### Frontend
 - HTML  
-- CSS  
-- JavaScript *(opcional para funciones interactivas)*  
+- CSS   
 
 ---
 
