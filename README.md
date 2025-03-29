@@ -125,5 +125,8 @@ python src/scheduler.py
 📅 Año: 2025  
 🔗 [LinkedIn de Juanfer](https://www.linkedin.com/in/juanfermartinez/)
 
+**Frontend** desarrollado por **Duvan Mancilla**  
+📅 Año: 2025  
+🔗 [LinkedIn de Duvan](https://www.linkedin.com/in/duvan-mancilla/)
 ---
 
