@@ -124,7 +124,6 @@ python src/scheduler.py
 **Backend** desarrollado por **Juan Fernando Martínez Ruiz**  
 📅 Año: 2025  
 🔗 [LinkedIn de Juanfer](https://www.linkedin.com/in/juanfermartinez/)
-
 **Frontend** desarrollado por **Duvan Mancilla**  
 📅 Año: 2025  
 🔗 [LinkedIn de Duvan](https://www.linkedin.com/in/duvan-mancilla/)
