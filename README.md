@@ -1,21 +1,28 @@
+
 # 🛒 MercadoLibre Price Analyzer
 
-**MercadoLibre Price Analyzer** es una aplicación interactiva desarrollada en **Python + Streamlit** que permite:
+**MercadoLibre Price Analyzer** es una aplicación interactiva desarrollada en **Python + Flask + HTML/CSS** que permite:
 
 - Realizar scraping diario de precios de productos en MercadoLibre  
 - Detectar precios atípicos (outliers)  
 - Analizar la evolución histórica de precios por producto  
-- Visualizar todo de forma clara e intuitiva  
+- Visualizar todo de forma clara e intuitiva desde una interfaz web personalizada  
 
 ---
 
 ## 📦 Tecnologías utilizadas
 
+### Backend
 - Python 3.10+  
+- Flask  
 - Selenium  
 - Pandas  
 - Matplotlib  
-- Streamlit  
+
+### Frontend
+- HTML  
+- CSS  
+- JavaScript *(opcional para funciones interactivas)*  
 
 ---
 
@@ -33,55 +40,78 @@
 ## 📁 Estructura del proyecto
 
 ```
-Scraper-MercadoLibre/
+MercadoLibre-Price-Analyzer/
 │
-├── data/                      ← Archivos generados automáticamente (productos, outliers, evolución)
+├── backend/
+│   ├── src/
+│   │   ├── main_app.py            ← App en Streamlit (versión inicial)
+│   │   ├── api.py                 ← ✅ API con Flask para exponer los datos
+│   │   ├── scraper.py             ← Scraping de una sola categoría
+│   │   ├── multi_scraper.py       ← Scraping de múltiples categorías
+│   │   ├── scheduler.py           ← Ejecución automática diaria
+│   │   ├── outliers.py            ← Detección de precios atípicos
+│   │   ├── outliers_dashboard.py  ← Versión interactiva solo para outliers
+│   │   ├── graficar_outliers.py   ← Visualización estática
+│   │   ├── evolucion_multiples.py ← Construcción de CSVs de evolución
+│   │   └── analisis.py            ← Gráficas de distribución y rankings
+│   ├── data/                      ← Archivos generados automáticamente (.csv)
+│   └── requirements.txt
 │
-├── src/
-│   ├── main_app.py            ← ✅ App principal Streamlit
-│   ├── scraper.py             ← Scraping de una sola categoría
-│   ├── multi_scraper.py       ← Scraping de múltiples categorías
-│   ├── scheduler.py           ← Ejecución automática diaria
-│   ├── outliers.py            ← Detección de precios atípicos
-│   ├── outliers_dashboard.py  ← Versión previa interactiva solo para outliers
-│   ├── graficar_outliers.py   ← Visualización estática
-│   ├── evolucion_multiples.py ← Construcción de CSVs de evolución
-│   └── analisis.py            ← Gráficas de distribución y rankings
+├── frontend/
+│   └── (Interfaz desarrollada en HTML + CSS por el frontend developer)
 ```
 
 ---
 
 ## ⚙️ Requisitos
 
-Instala las dependencias necesarias:
+Instala las dependencias necesarias para el backend:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-O bien, manualmente:
-
-```bash
-pip install selenium pandas matplotlib streamlit schedule
-```
-
-> 💡 Asegúrate de tener `chromedriver.exe` en `src/` y compatible con tu versión de Google Chrome.
+> 💡 Asegúrate de tener `chromedriver.exe` dentro de `src/` y que sea compatible con tu versión de Google Chrome.
 
 ---
 
-## ▶️ ¿Cómo ejecutar la app?
+## ▶️ ¿Cómo ejecutar el backend (API)?
 
-Desde la raíz del proyecto, ejecuta:
+Desde la carpeta `backend/src`, corre:
 
 ```bash
-streamlit run src/main_app.py
+python api.py
 ```
+
+Esto iniciará la API en: `http://localhost:5000`  
+Ejemplos de endpoints disponibles:
+
+- `/api/ps5`
+- `/api/laptop`
+- `/api/silla gamer`
+- `/api/categorias`
+
+---
+
+## 💻 ¿Quién desarrolla el frontend?
+
+El frontend del proyecto está siendo desarrollado por **Duvan Mancilla**  
+🔗 [LinkedIn de Duvan](https://www.linkedin.com/in/duvan-mancilla/)  
+Tecnologías: **HTML, CSS**
+
+---
+
+## 📷 Screenshots
+
+| Interfaz | Scraping | Análisis |
+|----------|----------|----------|
+| ![screenshot](screenshots/screenshot.png) | ![screenshot1](screenshots/screenshot1.png) | ![screenshot2](screenshots/screenshot2.png) |
 
 ---
 
 ## 📅 Automatización
 
-El archivo `scheduler.py` ejecuta el scraping diariamente a una hora definida (por defecto 09:00 a.m.)
+El archivo `scheduler.py` ejecuta el scraping automáticamente cada día a las 09:00 a.m.
 
 ```bash
 python src/scheduler.py
@@ -91,8 +121,12 @@ python src/scheduler.py
 
 ## 📤 Créditos
 
-Proyecto desarrollado por **Juan Fernando Martínez Ruiz**  
+**Backend** desarrollado por **Juan Fernando Martínez Ruiz**  
 📅 Año: 2025  
-🔗 [LinkedIn](https://www.linkedin.com/in/juanfermartinez/)
+🔗 [LinkedIn de Juanfer](https://www.linkedin.com/in/juanfermartinez/)
 
 ---
+
+## 📄 Licencia
+
+MIT License
