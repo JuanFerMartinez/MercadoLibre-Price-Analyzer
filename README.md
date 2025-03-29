@@ -35,17 +35,64 @@
 ```
 Scraper-MercadoLibre/
 │
-├── data/ ← Archivos generados automáticamente (productos, outliers, evolución)
+├── data/                      ← Archivos generados automáticamente (productos, outliers, evolución)
 │
 ├── src/
-│ ├── main_app.py ← ✅ App principal Streamlit
-│ ├── scraper.py ← Scraping de una sola categoría
-│ ├── multi_scraper.py ← Scraping de múltiples categorías
-│ ├── scheduler.py ← Ejecución automática diaria
-│ ├── outliers.py ← Detección de precios atípicos
-│ ├── outliers_dashboard.py ← Versión previa interactiva solo para outliers
-│ ├── graficar_outliers.py ← Visualización estática
-│ ├── evolucion_multiples.py ← Construcción de CSVs de evolución
-│ └── analisis.py ← Gráficas de distribución y rankings
+│   ├── main_app.py            ← ✅ App principal Streamlit
+│   ├── scraper.py             ← Scraping de una sola categoría
+│   ├── multi_scraper.py       ← Scraping de múltiples categorías
+│   ├── scheduler.py           ← Ejecución automática diaria
+│   ├── outliers.py            ← Detección de precios atípicos
+│   ├── outliers_dashboard.py  ← Versión previa interactiva solo para outliers
+│   ├── graficar_outliers.py   ← Visualización estática
+│   ├── evolucion_multiples.py ← Construcción de CSVs de evolución
+│   └── analisis.py            ← Gráficas de distribución y rankings
 ```
 
+---
+
+## ⚙️ Requisitos
+
+Instala las dependencias necesarias:
+
+```bash
+pip install -r requirements.txt
+```
+
+O bien, manualmente:
+
+```bash
+pip install selenium pandas matplotlib streamlit schedule
+```
+
+> 💡 Asegúrate de tener `chromedriver.exe` en `src/` y compatible con tu versión de Google Chrome.
+
+---
+
+## ▶️ ¿Cómo ejecutar la app?
+
+Desde la raíz del proyecto, ejecuta:
+
+```bash
+streamlit run src/main_app.py
+```
+
+---
+
+## 📅 Automatización
+
+El archivo `scheduler.py` ejecuta el scraping diariamente a una hora definida (por defecto 09:00 a.m.)
+
+```bash
+python src/scheduler.py
+```
+
+---
+
+## 📤 Créditos
+
+Proyecto desarrollado por **Juan Fernando Martínez Ruiz**  
+📅 Año: 2025  
+🔗 [LinkedIn](https://www.linkedin.com/in/juanfermartinez/)
+
+---
