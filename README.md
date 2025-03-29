@@ -33,4 +33,19 @@
 ## 📁 Estructura del proyecto
 
 ```
-Scraper-MercadoLibre/ │ ├── data/ ← Archivos generados automáticamente (productos, outliers, evolución) │ ├── src/ │ ├── main_app.py ← ✅ App principal Streamlit │ ├── scraper.py ← Scraping de una sola categoría │ ├── multi_scraper.py ← Scraping de múltiples categorías │ ├── scheduler.py ← Ejecución automática diaria │ ├── outliers.py ← Detección de precios atípicos │ ├── outliers_dashboard.py ← Versión previa interactiva solo para outliers │ ├── graficar_outliers.py ← Visualización estática │ ├── evolucion_multiples.py ← Construcción de CSVs de evolución │ └── analisis.py ← Gráficas de distribución y rankings
+Scraper-MercadoLibre/
+│
+├── data/ ← Archivos generados automáticamente (productos, outliers, evolución)
+│
+├── src/
+│ ├── main_app.py ← ✅ App principal Streamlit
+│ ├── scraper.py ← Scraping de una sola categoría
+│ ├── multi_scraper.py ← Scraping de múltiples categorías
+│ ├── scheduler.py ← Ejecución automática diaria
+│ ├── outliers.py ← Detección de precios atípicos
+│ ├── outliers_dashboard.py ← Versión previa interactiva solo para outliers
+│ ├── graficar_outliers.py ← Visualización estática
+│ ├── evolucion_multiples.py ← Construcción de CSVs de evolución
+│ └── analisis.py ← Gráficas de distribución y rankings
+```
+
