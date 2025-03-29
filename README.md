@@ -24,6 +24,11 @@
 - CSS   
 
 ---
+## 💻 ¿Quién desarrolla el frontend?
+
+El frontend del proyecto está siendo desarrollado por **Duvan Mancilla**  
+🔗 [LinkedIn de Duvan](https://www.linkedin.com/in/duvan-mancilla/)  
+Tecnologías: **HTML, CSS**
 
 ## 🚀 Funcionalidades principales
 
@@ -92,11 +97,7 @@ Ejemplos de endpoints disponibles:
 
 ---
 
-## 💻 ¿Quién desarrolla el frontend?
 
-El frontend del proyecto está siendo desarrollado por **Duvan Mancilla**  
-🔗 [LinkedIn de Duvan](https://www.linkedin.com/in/duvan-mancilla/)  
-Tecnologías: **HTML, CSS**
 
 ---
 
@@ -126,6 +127,3 @@ python src/scheduler.py
 
 ---
 
-## 📄 Licencia
-
-MIT License
